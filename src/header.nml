@@ -1,0 +1,61 @@
+/* *** Begin Header *** */
+
+grf {
+	grfid: "TT18";
+	name: string(STR_GRF_NAME);
+	desc: string(STR_GRF_DESC);
+	version: 0;
+	min_compatible_version: 0;
+
+	url: string(STR_WEBSITE);
+	
+	param 1 {
+		param_company_colours {
+			name: string(STR_PARAM_NAME_CCOLOUR);
+			desc: string(STR_PARAM_DESC_CCOLOUR);
+			min_value: 0;
+			max_value: 1;
+			def_value: 0;
+			names: {
+				0: string(PARAM_CCOLOUR_REALISTIC);
+				1: string(PARAM_CCOLOUR_CC);
+			};
+		}
+	}
+}
+
+railtypetable {
+	RAIL, ELRL
+}
+
+cargotable {
+	PASS
+}
+
+/* Disable all base game trains. */
+disable_item(FEAT_TRAINS);
+
+/*
+Base costs are tweaked to balance vehicle purchase and running costs using a strategy developed by Andythenorth in his excellent Iron Horse 2 train set. 
+This requires changing base costs to give greater range and control, and allow me to borrow values directly from the Iron Horse code reference. Thanks, Andy! :)
+
+Note that all engines use RUNNING_COST_STEAM and all wagons use RUNNING_COST_DIESEL. 
+Unlike other base cost overrides, changing vehicle base costs only affects vehicles within that NewGRF, so other vehicle sets will not be affected.
+*/
+
+basecost {
+	PR_BUILD_VEHICLE_TRAIN: -1;
+	PR_BUILD_VEHICLE_WAGON: 1;
+	PR_RUNNING_TRAIN_STEAM: -3;
+	PR_RUNNING_TRAIN_DIESEL: -4;
+}
+
+/* Sort vehicles in the purchase menu.
+
+Vehicle IDs are set manually for each train so updates are savegame-compatible.
+
+0: SJ Y2 "Kustpilen"
+
+*/
+
+/* *** End Header *** */

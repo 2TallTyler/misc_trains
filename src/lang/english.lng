@@ -1,0 +1,17 @@
+##grflangid 0x01
+
+STR_GRF_NAME						:{TITLE} {VERSION}
+STR_GRF_DESC						:{ORANGE}Miscellaneous trains {BLACK} commissioned by DenLillePrins.{}{}{ORANGE}Visit website for train list and more information.{}{}{BLACK}Created by 2TallTyler.
+
+STR_WEBSITE							:https://github.com/2TallTyler/misc_trains
+
+STR_PARAM_NAME_CCOLOUR				:Colour
+STR_PARAM_DESC_CCOLOUR				:Select whether trains use their real-world colours or the OpenTTD company colours.
+PARAM_CCOLOUR_REALISTIC				:Realistic
+PARAM_CCOLOUR_CC					:2CC
+
+STR_ROLE_PASS_FREIGHT				:Role: {GOLD}Passenger or Freight
+STR_ROLE_PASS						:Role: {GOLD}Passenger
+STR_ROLE_EXPRESS_PASS				:Role: {GOLD}Express Passenger
+
+STR_NAME_MF							:SJ Y2 "Kustpilen" (Diesel)
